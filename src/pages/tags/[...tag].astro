@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Base.astro";
+
+export async function getStaticPaths() {
+  const allPosts = (await getCollection("blog")).map((post) => {
+    return { ...post, url: `/${post.collection}/${post.slug}` };
+  });
+
+  const allTils = (await getCollection("til")).map((til) => {
+    return { ...til, url: `/${til.collection}/${til.slug}` };
+  });
+
+  const allContent = [...allPosts, ...allTils];
+
+  const uniqueTags = [
+    ...new Set(allContent.map((post) => post.data.tags).flat()),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allContent.filter((post) =>
+      post.data.tags.includes(tag)
+    );
+
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<Layout>
+  <div>
+    Posts tagged with <code>{tag}</code>
+
+    <ul>
+      {posts.map((post) => <a href={post.url}>{post.data.title}</a>)}
+    </ul>
+  </div>
+</Layout>

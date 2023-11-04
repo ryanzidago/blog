@@ -2,6 +2,7 @@
 title: "What I've learned building a resume builder"
 description: "What I've learned building a resume builder"
 pubDate: '2023-11-04'
+tags: ["product development", "learning in public"] 
 ---
 
 Lately, I have been busy building <a href="https://coverly.vercel.app" target="_blank">Coverly</a>, a resume builder created with TypeScript, NextJS, TailwindCSS, Prisma, PostgreSQL and Vercel.

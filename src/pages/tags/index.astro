@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Base.astro";
+
+const allPosts = await Astro.glob("../../content/blog/*.md*");
+const allTils = await Astro.glob("../../content/til/*.md*");
+
+const allEntries = [...allPosts, ...allTils];
+
+const tags = [
+  ...new Set(allEntries.map((entry) => entry.frontmatter.tags).flat()),
+];
+---
+
+<Layout>
+  <div>
+    <ul>
+      {
+        tags.map((tag) => (
+          <li>
+            <a href={`/tags/${tag}`}>{tag}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Layout>

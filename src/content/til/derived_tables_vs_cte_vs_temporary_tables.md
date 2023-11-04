@@ -2,6 +2,7 @@
 title: "Derived tables vs. CTEs vs. temporary tables"
 description: "Derived tables vs. CTEs vs. temporary tables"
 pubDate: '2023-11-04'
+tags: ["database"]
 ---
 
 # Derived tables vs. CTEs vs. temporary tables

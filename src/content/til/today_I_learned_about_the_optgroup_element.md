@@ -24,4 +24,4 @@ This element can be used to group `<option>` element within a `<select>` element
 </select>
 ```
 
-Source <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup" target="_blank"></a>.
+Source <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup" target="_blank">here</a>.

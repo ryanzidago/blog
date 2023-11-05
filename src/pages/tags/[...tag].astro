@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 
   return uniqueTags.map((tag) => {
     const filteredPosts = allContent.filter((post) =>
-      post.data.tags.includes(tag)
+      post?.data?.tags?.includes(tag as string)
     );
 
     return {

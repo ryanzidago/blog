@@ -5,8 +5,6 @@ pubDate: '2023-11-04'
 tags: ["database"]
 ---
 
-# Derived tables vs. CTEs vs. temporary tables
-
 For the following schema and dataset:
 
 ```sql

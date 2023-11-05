@@ -78,4 +78,4 @@ WHERE total_spent_by_customer_id.total_spent > 1000;
 
 Temporary tables are automatically dropped at the end of the session or transaction. 
 
-See [thread](https://www.perplexity.ai/search/Whats-a-derived-2HBaiJyLRuOOmjfbBtd.0w?s=c) on perplexity.ai.
+See <a href="https://www.perplexity.ai/search/Whats-a-derived-2HBaiJyLRuOOmjfbBtd.0w?s=c" target="_blank">thread</a> on perplexity.ai.

@@ -76,7 +76,7 @@ const posts = (await getCollection('blog')).sort(
 			<section>
 				<ul>
 					{
-						posts.map((post) => (
+						posts.toReversed().map((post) => (
 							<li>
 								<a href={`/blog/${post.slug}/`}>
 									<h4 class="title">{post.data.title}</h4>
